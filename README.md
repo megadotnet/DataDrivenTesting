@@ -5,3 +5,7 @@ Data-driven testing (DDT) is a term used in the testing of computer software to 
 ## Introduction
 
 Selenium with TestNG
+
+## Get Start
+
+  mvn test
