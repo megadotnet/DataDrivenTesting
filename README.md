@@ -12,4 +12,4 @@ Selenium with TestNG
 
 ## Get Start
 In command-line:
-  mvn test
+  mvn clean test

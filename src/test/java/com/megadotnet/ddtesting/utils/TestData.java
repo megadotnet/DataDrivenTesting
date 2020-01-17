@@ -1,18 +1,19 @@
 package com.megadotnet.ddtesting.utils;
 
 import com.megadotnet.ddtesting.base.Base;
-import org.apache.log4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.DataProvider;
+import org.slf4j.Logger;
+
 
 /*
  * Copyright (C) 2017 Megadotnet
  *
  *
  */
-
 public class TestData {
 
-    private static final Logger logger = Logger.getLogger(TestData.class);
+    private static final Logger logger = LoggerFactory.getLogger(TestData.class);
 
     @DataProvider(name = "LoginData")
     public static Object[][] dataAdmin() throws Exception {

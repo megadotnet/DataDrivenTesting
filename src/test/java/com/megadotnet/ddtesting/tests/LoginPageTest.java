@@ -3,9 +3,10 @@ package com.megadotnet.ddtesting.tests;
 import com.megadotnet.ddtesting.base.Base;
 import com.megadotnet.ddtesting.pages.LoginPage;
 import com.megadotnet.ddtesting.utils.TestData;
-import org.apache.log4j.Logger;
 import org.json.JSONObject;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -17,7 +18,7 @@ import org.testng.annotations.*;
 
 public class LoginPageTest extends Base {
 
-    private static final Logger logger = Logger.getLogger(LoginPageTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(LoginPageTest.class);
 
     LoginPage loginPage;
 

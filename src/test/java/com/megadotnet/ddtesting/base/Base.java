@@ -1,6 +1,5 @@
 package com.megadotnet.ddtesting.base;
 
-import org.apache.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -13,6 +12,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -30,7 +31,7 @@ import static org.testng.Assert.fail;
 
 public class Base {
 
-    private static final Logger logger = Logger.getLogger(Base.class);
+    private static final Logger logger = LoggerFactory.getLogger(Base.class);
 
     protected static String url;
     protected static WebDriver driver;
@@ -66,7 +67,7 @@ public class Base {
             driver = getWebDriver();
 
         } catch (IOException e) {
-            logger.fatal(e);
+            logger.error(e.getMessage());
             System.exit(0);
         }
     }
@@ -306,20 +307,20 @@ public class Base {
                 data[i - 1][0] = record;
             }
         } catch (FileNotFoundException e) {
-            logger.fatal(e);
+            logger.error(e.getMessage());
             System.exit(0);
         } catch (IOException e) {
-            logger.fatal(e);
+            logger.error(e.getMessage());
             System.exit(0);
         } catch (JSONException e) {
-            logger.fatal(e);
+            logger.error(e.getMessage());
             System.exit(0);
         } finally {
             if (br != null) {
                 try {
                     br.close();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    logger.error(e.getMessage());
                 }
             }
         }
