@@ -8,3 +8,6 @@ chromedriver.exe
 https://github.com/mozilla/geckodriver/releases
 
 geckodriver.exe
+
+3. For Internet Explorer
+https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver

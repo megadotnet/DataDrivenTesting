@@ -11,5 +11,10 @@ Most commercial automated software tools on the market support some sort of data
 Selenium with TestNG
 
 ## Get Start
-In command-line:
-  mvn clean test
+with maven command-line:
+
+    mvn clean test
+
+change testing driver with Firefox, Chrome, InternetExplorer, HtmlUnitDriver(Default)
+
+    BROWSER_TYPE=HtmlUnitDriver
