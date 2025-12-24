@@ -2,6 +2,7 @@ package com.megadotnet.ddtesting.base;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -18,8 +19,8 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import java.io.*;
+import java.time.Duration;
 import java.util.*;
-import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.fail;
 
@@ -68,7 +69,8 @@ public class Base {
 
         } catch (IOException e) {
             logger.error(e.getMessage());
-            System.exit(0);
+            // System.exit is harsh for testing, but keeping behavior similar
+            throw new RuntimeException("Failed to load properties", e);
         }
     }
 
@@ -81,30 +83,28 @@ public class Base {
 
         if (BROWSER_TYPE.equalsIgnoreCase("HtmlUnitDriver")) {
             logger.info("Starting HtmlUnitDriver ");
-            driver = new HtmlUnitDriver();
+            driver = new HtmlUnitDriver(true); // Enable JS support by default if needed, or false
         } else if (BROWSER_TYPE.equalsIgnoreCase("Firefox")) {
-			final File file = new File("E:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
-            System.setProperty("webdriver.firefox.bin", file.getAbsolutePath());
-            logger.info("Staring Firefox");		
+            logger.info("Starting Firefox");
+            // Selenium 4 (Selenium Manager) handles driver automatically
             driver = new FirefoxDriver();
         } else if (BROWSER_TYPE.equalsIgnoreCase("Chrome")) {
-            final File file = new File("driver/chromedriver.exe");
-            System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+            logger.info("Starting Chrome");
+            // Selenium 4 handles driver automatically
             driver = new ChromeDriver();
         } else if (BROWSER_TYPE.equalsIgnoreCase("InternetExplorer")) {
-            final File file = new File("driver/IEDriverServer.exe");
-            System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
+            logger.info("Starting InternetExplorer");
             driver = new InternetExplorerDriver();
         } else if (BROWSER_TYPE.equalsIgnoreCase("HtmlUnit")) {
-            driver = new HtmlUnitDriver();
+            driver = new HtmlUnitDriver(true);
         } else {
             logger.info("BROWSER_TYPE not identified. Starting default type");
-            driver = new HtmlUnitDriver();
+            driver = new HtmlUnitDriver(true);
         }
 
         logger.info("BROWSER_TYPE=" + BROWSER_TYPE);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(TIME_OUT, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIME_OUT));
         return driver;
     }
 
@@ -164,7 +164,7 @@ public class Base {
 
     protected void setFilePath(By by, String file) throws Exception {
         WebElement field = driver.findElement(by);
-        field.sendKeys(System.getProperty("user.dir") + "\\src\\test\\resources\\" + file);
+        field.sendKeys(System.getProperty("user.dir") + File.separator + "src" + File.separator + "test" + File.separator + "resources" + File.separator + file);
     }
 
     protected void checkPageTitle(String title) throws Exception {
@@ -276,7 +276,7 @@ public class Base {
 
     public static JSONObject[][] getCSVToJson(String name) throws Exception {
 
-        String filePath = "src\\test\\resources\\" + name + ".csv";
+        String filePath = "src" + File.separator + "test" + File.separator + "resources" + File.separator + name + ".csv";
         BufferedReader br = null;
         String line;
         String[] header;
@@ -334,7 +334,7 @@ public class Base {
 
     public static JSONObject[][] getExcelToJson(String file, String _sheet) throws JSONException, IOException {
 
-        String filePath = "src\\test\\resources\\" + file;
+        String filePath = "src" + File.separator + "test" + File.separator + "resources" + File.separator + file;
         String[] header;
 
         FileInputStream fileInputStream = new FileInputStream(filePath);
@@ -363,7 +363,7 @@ public class Base {
                     record.put(header[headerIndex], cell.getStringCellValue());
 
                 } catch (IllegalStateException e) {
-                    cell.setCellType(Cell.CELL_TYPE_STRING);
+                    cell.setCellType(CellType.STRING);
                     record.put(header[headerIndex], cell.getStringCellValue());
                 } catch (ArrayIndexOutOfBoundsException e) {
                     record.put(header[headerIndex], "");

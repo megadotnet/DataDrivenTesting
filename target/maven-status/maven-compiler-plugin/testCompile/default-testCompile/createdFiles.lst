@@ -1,0 +1,8 @@
+com/megadotnet/ddtesting/base/AdditionalConditions.class
+com/megadotnet/ddtesting/pages/LoginPage.class
+com/megadotnet/ddtesting/base/Base.class
+com/megadotnet/ddtesting/utils/TestData.class
+com/megadotnet/ddtesting/tests/ExcelReadTest.class
+com/megadotnet/ddtesting/tests/LoginPageTest.class
+com/megadotnet/ddtesting/utils/ExcelUtil.class
+com/megadotnet/ddtesting/base/AdditionalConditions$1.class
