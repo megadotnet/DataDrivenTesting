@@ -1,0 +1,7 @@
+/app/src/test/java/com/megadotnet/ddtesting/base/AdditionalConditions.java
+/app/src/test/java/com/megadotnet/ddtesting/utils/ExcelUtil.java
+/app/src/test/java/com/megadotnet/ddtesting/utils/TestData.java
+/app/src/test/java/com/megadotnet/ddtesting/pages/LoginPage.java
+/app/src/test/java/com/megadotnet/ddtesting/tests/LoginPageTest.java
+/app/src/test/java/com/megadotnet/ddtesting/base/Base.java
+/app/src/test/java/com/megadotnet/ddtesting/tests/ExcelReadTest.java

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.megadotnet.ddtesting.tests.ExcelReadTest" time="0.923" tests="1" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/app/target/test-classes:/app/target/classes:/home/jules/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/home/jules/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/home/jules/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/home/jules/.m2/repository/org/testng/testng/7.10.0/testng-7.10.0.jar:/home/jules/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/home/jules/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-java/4.23.0/selenium-java-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-api/4.23.0/selenium-api-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.23.0/selenium-chrome-driver-4.23.0.jar:/home/jules/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.23.0/selenium-chromium-driver-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-json/4.23.0/selenium-json-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.23.0/selenium-manager-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v125/4.23.0/selenium-devtools-v125-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v126/4.23.0/selenium-devtools-v126-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v127/4.23.0/selenium-devtools-v127-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.23.0/selenium-devtools-v85-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.23.0/selenium-edge-driver-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.23.0/selenium-firefox-driver-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-http/4.23.0/selenium-http-4.23.0.jar:/home/jules/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.23.0/selenium-ie-driver-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.23.0/selenium-remote-driver-4.23.0.jar:/home/jules/.m2/repository/com/google/guava/guava/33.2.1-jre/guava-33.2.1-jre.jar:/home/jules/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/home/jules/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/jules/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/jules/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/home/jules/.m2/repository/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1.jar:/home/jules/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/home/jules/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-api/1.40.0/opentelemetry-api-1.40.0.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-context/1.40.0/opentelemetry-context-1.40.0.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.40.0/opentelemetry-exporter-logging-1.40.0.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.40.0/opentelemetry-sdk-common-1.40.0.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.40.0/opentelemetry-sdk-extension-autoconfigure-spi-1.40.0.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.40.0/opentelemetry-sdk-extension-autoconfigure-1.40.0.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.40.0-alpha/opentelemetry-api-incubator-1.40.0-alpha.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.40.0/opentelemetry-sdk-trace-1.40.0.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.40.0/opentelemetry-sdk-1.40.0.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.40.0/opentelemetry-sdk-metrics-1.40.0.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.40.0/opentelemetry-sdk-logs-1.40.0.jar:/home/jules/.m2/repository/net/bytebuddy/byte-buddy/1.14.18/byte-buddy-1.14.18.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-os/4.23.0/selenium-os-4.23.0.jar:/home/jules/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.23.0/selenium-safari-driver-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-support/4.23.0/selenium-support-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/htmlunit-driver/4.13.0/htmlunit-driver-4.13.0.jar:/home/jules/.m2/repository/net/sourceforge/htmlunit/htmlunit/2.70.0/htmlunit-2.70.0.jar:/home/jules/.m2/repository/org/apache/httpcomponents/httpmime/4.5.14/httpmime-4.5.14.jar:/home/jules/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar:/home/jules/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/home/jules/.m2/repository/net/sourceforge/htmlunit/htmlunit-core-js/2.70.0/htmlunit-core-js-2.70.0.jar:/home/jules/.m2/repository/net/sourceforge/htmlunit/neko-htmlunit/2.70.0/neko-htmlunit-2.70.0.jar:/home/jules/.m2/repository/net/sourceforge/htmlunit/htmlunit-cssparser/1.14.0/htmlunit-cssparser-1.14.0.jar:/home/jules/.m2/repository/net/sourceforge/htmlunit/htmlunit-xpath/2.70.0/htmlunit-xpath-2.70.0.jar:/home/jules/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/home/jules/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/home/jules/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/jules/.m2/repository/commons-net/commons-net/3.9.0/commons-net-3.9.0.jar:/home/jules/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/home/jules/.m2/repository/com/shapesecurity/salvation2/3.0.1/salvation2-3.0.1.jar:/home/jules/.m2/repository/org/eclipse/jetty/websocket/websocket-client/9.4.50.v20221201/websocket-client-9.4.50.v20221201.jar:/home/jules/.m2/repository/org/eclipse/jetty/jetty-client/9.4.50.v20221201/jetty-client-9.4.50.v20221201.jar:/home/jules/.m2/repository/org/eclipse/jetty/jetty-http/9.4.50.v20221201/jetty-http-9.4.50.v20221201.jar:/home/jules/.m2/repository/org/eclipse/jetty/jetty-util/9.4.50.v20221201/jetty-util-9.4.50.v20221201.jar:/home/jules/.m2/repository/org/eclipse/jetty/jetty-io/9.4.50.v20221201/jetty-io-9.4.50.v20221201.jar:/home/jules/.m2/repository/org/eclipse/jetty/websocket/websocket-common/9.4.50.v20221201/websocket-common-9.4.50.v20221201.jar:/home/jules/.m2/repository/org/eclipse/jetty/websocket/websocket-api/9.4.50.v20221201/websocket-api-9.4.50.v20221201.jar:/home/jules/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/home/jules/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/jules/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/home/jules/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/home/jules/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/home/jules/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/home/jules/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/home/jules/.m2/repository/org/apache/poi/poi-ooxml/5.2.3/poi-ooxml-5.2.3.jar:/home/jules/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.3/poi-ooxml-lite-5.2.3.jar:/home/jules/.m2/repository/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1.jar:/home/jules/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/home/jules/.m2/repository/com/github/virtuald/curvesapi/1.07/curvesapi-1.07.jar:/home/jules/.m2/repository/org/json/json/20231013/json-20231013.jar:"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="user.timezone" value="Etc/UTC"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/app/target/surefire/surefirebooter-20251224023339291_3.jar /app/target/surefire 2025-12-24T02-33-39_212-jvmRun1 surefire-20251224023339291_1tmp surefire_0-20251224023339291_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="ExcelReadTest"/>
+    <property name="surefire.test.class.path" value="/app/target/test-classes:/app/target/classes:/home/jules/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/home/jules/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/home/jules/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/home/jules/.m2/repository/org/testng/testng/7.10.0/testng-7.10.0.jar:/home/jules/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/home/jules/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-java/4.23.0/selenium-java-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-api/4.23.0/selenium-api-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.23.0/selenium-chrome-driver-4.23.0.jar:/home/jules/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.23.0/selenium-chromium-driver-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-json/4.23.0/selenium-json-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.23.0/selenium-manager-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v125/4.23.0/selenium-devtools-v125-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v126/4.23.0/selenium-devtools-v126-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v127/4.23.0/selenium-devtools-v127-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.23.0/selenium-devtools-v85-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.23.0/selenium-edge-driver-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.23.0/selenium-firefox-driver-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-http/4.23.0/selenium-http-4.23.0.jar:/home/jules/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.23.0/selenium-ie-driver-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.23.0/selenium-remote-driver-4.23.0.jar:/home/jules/.m2/repository/com/google/guava/guava/33.2.1-jre/guava-33.2.1-jre.jar:/home/jules/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/home/jules/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/jules/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/jules/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/home/jules/.m2/repository/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1.jar:/home/jules/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/home/jules/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-api/1.40.0/opentelemetry-api-1.40.0.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-context/1.40.0/opentelemetry-context-1.40.0.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.40.0/opentelemetry-exporter-logging-1.40.0.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.40.0/opentelemetry-sdk-common-1.40.0.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.40.0/opentelemetry-sdk-extension-autoconfigure-spi-1.40.0.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.40.0/opentelemetry-sdk-extension-autoconfigure-1.40.0.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.40.0-alpha/opentelemetry-api-incubator-1.40.0-alpha.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.40.0/opentelemetry-sdk-trace-1.40.0.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.40.0/opentelemetry-sdk-1.40.0.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.40.0/opentelemetry-sdk-metrics-1.40.0.jar:/home/jules/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.40.0/opentelemetry-sdk-logs-1.40.0.jar:/home/jules/.m2/repository/net/bytebuddy/byte-buddy/1.14.18/byte-buddy-1.14.18.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-os/4.23.0/selenium-os-4.23.0.jar:/home/jules/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.23.0/selenium-safari-driver-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/selenium-support/4.23.0/selenium-support-4.23.0.jar:/home/jules/.m2/repository/org/seleniumhq/selenium/htmlunit-driver/4.13.0/htmlunit-driver-4.13.0.jar:/home/jules/.m2/repository/net/sourceforge/htmlunit/htmlunit/2.70.0/htmlunit-2.70.0.jar:/home/jules/.m2/repository/org/apache/httpcomponents/httpmime/4.5.14/httpmime-4.5.14.jar:/home/jules/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar:/home/jules/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/home/jules/.m2/repository/net/sourceforge/htmlunit/htmlunit-core-js/2.70.0/htmlunit-core-js-2.70.0.jar:/home/jules/.m2/repository/net/sourceforge/htmlunit/neko-htmlunit/2.70.0/neko-htmlunit-2.70.0.jar:/home/jules/.m2/repository/net/sourceforge/htmlunit/htmlunit-cssparser/1.14.0/htmlunit-cssparser-1.14.0.jar:/home/jules/.m2/repository/net/sourceforge/htmlunit/htmlunit-xpath/2.70.0/htmlunit-xpath-2.70.0.jar:/home/jules/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/home/jules/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/home/jules/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/jules/.m2/repository/commons-net/commons-net/3.9.0/commons-net-3.9.0.jar:/home/jules/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/home/jules/.m2/repository/com/shapesecurity/salvation2/3.0.1/salvation2-3.0.1.jar:/home/jules/.m2/repository/org/eclipse/jetty/websocket/websocket-client/9.4.50.v20221201/websocket-client-9.4.50.v20221201.jar:/home/jules/.m2/repository/org/eclipse/jetty/jetty-client/9.4.50.v20221201/jetty-client-9.4.50.v20221201.jar:/home/jules/.m2/repository/org/eclipse/jetty/jetty-http/9.4.50.v20221201/jetty-http-9.4.50.v20221201.jar:/home/jules/.m2/repository/org/eclipse/jetty/jetty-util/9.4.50.v20221201/jetty-util-9.4.50.v20221201.jar:/home/jules/.m2/repository/org/eclipse/jetty/jetty-io/9.4.50.v20221201/jetty-io-9.4.50.v20221201.jar:/home/jules/.m2/repository/org/eclipse/jetty/websocket/websocket-common/9.4.50.v20221201/websocket-common-9.4.50.v20221201.jar:/home/jules/.m2/repository/org/eclipse/jetty/websocket/websocket-api/9.4.50.v20221201/websocket-api-9.4.50.v20221201.jar:/home/jules/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/home/jules/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/jules/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/home/jules/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/home/jules/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/home/jules/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/home/jules/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/home/jules/.m2/repository/org/apache/poi/poi-ooxml/5.2.3/poi-ooxml-5.2.3.jar:/home/jules/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.3/poi-ooxml-lite-5.2.3.jar:/home/jules/.m2/repository/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1.jar:/home/jules/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/home/jules/.m2/repository/com/github/virtuald/curvesapi/1.07/curvesapi-1.07.jar:/home/jules/.m2/repository/org/json/json/20231013/json-20231013.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/jules"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-07-15"/>
+    <property name="java.home" value="/usr/lib/jvm/java-21-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/app"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/app/target/surefire/surefirebooter-20251224023339291_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.8+9-Ubuntu-0ubuntu124.04.1"/>
+    <property name="user.name" value="jules"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.8.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/jules/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-21"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="21.0.8"/>
+    <property name="user.dir" value="/app"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="21.0.8+9-Ubuntu-0ubuntu124.04.1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testExcelRead" classname="com.megadotnet.ddtesting.tests.ExcelReadTest" time="0.278">
+    <failure message="Cannot invoke &quot;org.apache.poi.ss.usermodel.Sheet.getRow(int)&quot; because &quot;sheet&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null
+	at com.megadotnet.ddtesting.base.Base.getExcelToJson(Base.java:344)
+	at com.megadotnet.ddtesting.tests.ExcelReadTest.testExcelRead(ExcelReadTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[02:33:39,653 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.14
+02:33:39,655 |-INFO in ch.qos.logback.classic.util.ContextInitializer@489115ef - No custom configurators were discovered as a service.
+02:33:39,655 |-INFO in ch.qos.logback.classic.util.ContextInitializer@489115ef - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+02:33:39,656 |-INFO in ch.qos.logback.classic.util.ContextInitializer@489115ef - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+02:33:39,665 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+02:33:39,666 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+02:33:39,678 |-INFO in ch.qos.logback.classic.util.ContextInitializer@489115ef - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 10 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+02:33:39,678 |-INFO in ch.qos.logback.classic.util.ContextInitializer@489115ef - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+02:33:39,679 |-INFO in ch.qos.logback.classic.util.ContextInitializer@489115ef - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+02:33:39,680 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+02:33:39,685 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/app/target/test-classes/logback.xml]
+02:33:39,830 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+02:33:39,831 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+02:33:39,872 |-WARN in ch.qos.logback.core.ConsoleAppender[CONSOLE] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+02:33:39,872 |-WARN in ch.qos.logback.core.ConsoleAppender[CONSOLE] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+02:33:39,872 |-WARN in ch.qos.logback.core.ConsoleAppender[CONSOLE] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+02:33:39,873 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE-ROLLING]
+02:33:39,873 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+02:33:39,882 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@945288723 - setting totalSizeCap to 20 GB
+02:33:39,890 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@945288723 - Archive files will be limited to [10 MB] each.
+02:33:39,892 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@945288723 - Will use gz compression
+02:33:39,893 |-INFO in c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@945288723 - Will use the pattern logs/archived/app.%d{yyyy-MM-dd}.%i.log for the active file
+02:33:39,924 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@198b6731 - The date pattern is 'yyyy-MM-dd' from file name pattern 'logs/archived/app.%d{yyyy-MM-dd}.%i.log.gz'.
+02:33:39,924 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@198b6731 - Roll-over at midnight.
+02:33:39,932 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@198b6731 - Setting initial period to 2025-12-24T02:31:35.706Z
+02:33:39,934 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+02:33:39,936 |-ERROR in ch.qos.logback.classic.pattern.LoggerConverter@7c6908d7 - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+	at java.lang.NumberFormatException: For input string: "1."
+	at 	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at 	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at 	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at 	at ch.qos.logback.classic.pattern.NamedConverter.start(NamedConverter.java:92)
+	at 	at ch.qos.logback.core.pattern.ConverterUtil.startConverters(ConverterUtil.java:37)
+	at 	at ch.qos.logback.core.pattern.PatternLayoutBase.start(PatternLayoutBase.java:90)
+	at 	at ch.qos.logback.classic.encoder.PatternLayoutEncoder.start(PatternLayoutEncoder.java:28)
+	at 	at ch.qos.logback.core.model.processor.ImplicitModelHandler.postHandleComplex(ImplicitModelHandler.java:208)
+	at 	at ch.qos.logback.core.model.processor.ImplicitModelHandler.postHandle(ImplicitModelHandler.java:186)
+	at 	at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:257)
+	at 	at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+	at 	at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+	at 	at ch.qos.logback.core.model.processor.DefaultProcessor.traversalLoop(DefaultProcessor.java:90)
+	at 	at ch.qos.logback.core.model.processor.DefaultProcessor.process(DefaultProcessor.java:106)
+	at 	at ch.qos.logback.core.joran.GenericXMLConfigurator.processModel(GenericXMLConfigurator.java:208)
+	at 	at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:170)
+	at 	at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:122)
+	at 	at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:65)
+	at 	at ch.qos.logback.classic.util.DefaultJoranConfigurator.configureByResource(DefaultJoranConfigurator.java:68)
+	at 	at ch.qos.logback.classic.util.DefaultJoranConfigurator.configure(DefaultJoranConfigurator.java:35)
+	at 	at ch.qos.logback.classic.util.ContextInitializer.invokeConfigure(ContextInitializer.java:128)
+	at 	at ch.qos.logback.classic.util.ContextInitializer.autoConfig(ContextInitializer.java:103)
+	at 	at ch.qos.logback.classic.util.ContextInitializer.autoConfig(ContextInitializer.java:66)
+	at 	at ch.qos.logback.classic.spi.LogbackServiceProvider.initializeLoggerContext(LogbackServiceProvider.java:52)
+	at 	at ch.qos.logback.classic.spi.LogbackServiceProvider.initialize(LogbackServiceProvider.java:41)
+	at 	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:183)
+	at 	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:170)
+	at 	at org.slf4j.LoggerFactory.getProvider(LoggerFactory.java:455)
+	at 	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:441)
+	at 	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:390)
+	at 	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:416)
+	at 	at org.testng.log4testng.Logger.lambda$getLogger$0(Logger.java:30)
+	at 	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at 	at org.testng.log4testng.Logger.getLogger(Logger.java:30)
+	at 	at org.testng.TestNG.<clinit>(TestNG.java:111)
+	at 	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:102)
+	at 	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at 	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at 	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+02:33:39,940 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-ROLLING] - Active log file name: logs/ddt_app.log
+02:33:39,940 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-ROLLING] - File property is set to [logs/ddt_app.log]
+02:33:39,941 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [com.megadotnet] to DEBUG
+02:33:39,945 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting additivity of logger [com.megadotnet] to false
+02:33:39,945 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[com.megadotnet]
+02:33:39,946 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE-ROLLING] to Logger[com.megadotnet]
+02:33:39,946 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to ERROR
+02:33:39,946 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+02:33:39,946 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE-ROLLING] to Logger[ROOT]
+02:33:39,946 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@4e08711f - End of configuration.
+02:33:39,947 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@bcec361 - Registering current configuration as safe fallback point
+02:33:39,947 |-INFO in ch.qos.logback.classic.util.ContextInitializer@489115ef - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 268 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+
+Testing Excel Read with POI 5...
+]]></system-out>
+    <system-err><![CDATA[ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Sheet.getRow(int)" because "sheet" is null
+	at com.megadotnet.ddtesting.base.Base.getExcelToJson(Base.java:344)
+	at com.megadotnet.ddtesting.tests.ExcelReadTest.testExcelRead(ExcelReadTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></system-err>
+  </testcase>
+</testsuite>
